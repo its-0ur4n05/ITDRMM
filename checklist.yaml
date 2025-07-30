@@ -11,7 +11,7 @@ identity_visibility:
 
 
 detection_coverage:
-  - question: Are identity-related logs (e.g., AD, PAM, VPN, Jumpbox) being collected?
+  - question: Are identity-related logs (e.g., AD, PAM, VPN, Jump server) being collected?
   - question: Are there rules to detect lateral movement and privilege escalation?
   - question: Do you have baselines for normal user behavior (e.g., login times, locations)?
   - question: Are high-risk activities (e.g., password dump, multiple failed logins) being monitored?
