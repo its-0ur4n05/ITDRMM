@@ -1,0 +1,31 @@
+# ITDR Maturity Model - Self Assessment Checklist
+# Version: 1.0
+# Last updated: July 2025
+# Usage: Answer each question with true/false or yes/no
+
+identity_visibility:
+  - question: Do you maintain an up-to-date inventory of all identities (human + machine)?
+  - question: Are privileged accounts clearly identified and categorized?
+  - question: Are service accounts and their owners documented?
+  - question: Can you trace which identities access which systems (identity-to-asset mapping)?
+
+
+detection_coverage:
+  - question: Are identity-related logs (e.g., AD, PAM, VPN, Jumpbox) being collected?
+  - question: Are there rules to detect lateral movement and privilege escalation?
+  - question: Do you have baselines for normal user behavior (e.g., login times, locations)?
+  - question: Are high-risk activities (e.g., password dump, multiple failed logins) being monitored?
+
+
+response_mechanism:
+  - question: Is there a documented SOP for responding to identity-related incidents?
+  - question: Can you manually disable, lock, or reset accounts based on alerts?
+  - question: Are identity alerts routed via a ticketing system or SOAR playbook?
+  - question: Is there a review/escalation process when privileged accounts are involved?
+
+
+automation_intelligence:
+  - question: Do you apply risk scoring to users based on behavior or context?
+  - question: Are responses automated in part (e.g., auto-disable, MFA challenges)?
+  - question: Are graph-based or ML techniques used for behavioral anomaly detection?
+  - question: Can your detection model adapt over time based on new inputs or feedback?
