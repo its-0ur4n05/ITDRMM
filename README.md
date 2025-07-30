@@ -11,7 +11,7 @@ This maturity model helps teams benchmark their ITDR readiness across **five mat
 
 ---
 
-## 🔢 Maturity Levels
+## Maturity Levels
 
 | Level | Description                         |
 |-------|-------------------------------------|
@@ -23,7 +23,7 @@ This maturity model helps teams benchmark their ITDR readiness across **five mat
 
 ---
 
-## 🔍 Capability Dimensions
+## Capability Dimensions
 
 | Dimension            | L0 - Nonexistent | L1 - Reactive | L2 - Baseline | L3 - Active | L4 - Adaptive |
 |----------------------|------------------|---------------|---------------|-------------|---------------|
@@ -34,7 +34,7 @@ This maturity model helps teams benchmark their ITDR readiness across **five mat
 
 ---
 
-## ✅ Evaluation Checklist
+## Evaluation Checklist
 
 Create a checklist (e.g., YAML or JSON) to self-assess each dimension:
 
@@ -60,7 +60,7 @@ automation_intelligence:
 
 ---
 
-## 📘 How to Use This
+## How to Use This
 
 - Start by mapping your current state to each dimension and level.
 - Identify the lowest dimension to determine your **overall maturity floor**.
@@ -73,10 +73,5 @@ You can extend this repository with:
 
 ---
 
-## 📄 License
-MIT
-
----
-
-> **Author**: [Your Name or Org]  
+> **Author**: 0ur4n05
 > **Last Updated**: July 2025
