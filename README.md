@@ -42,20 +42,25 @@ Create a checklist (e.g., YAML or JSON) to self-assess each dimension:
 identity_visibility:
   - [ ] Do you maintain an up-to-date inventory of all identities (human + machine)?
   - [ ] Are privileged accounts clearly identified and tracked?
+  - [ ] Are service accounts and their owners documented?
+  - [ ] Can you trace which identities access which systems (identity-to-asset mapping)?
 
 detection_coverage:
-  - [ ] Are identity-related logs collected from AD, PAM, SSO, Jump servers, etc.?
-  - [ ] Are there rules to detect lateral movement and abnormal logins?
+  - [ ] Are identity-related logs (e.g., AD, PAM, VPN, Jump server) being collected?
+  - [ ] Are there rules to detect lateral movement and privilege escalation?
+  - [ ] Do you have baselines for normal user behavior (e.g., login times, locations)?
+  - [ ] Are high-risk activities (e.g., password dump, multiple failed logins) being monitored?
 
 response_mechanism:
-  - [ ] Is there a documented SOP for responding to suspicious identity activity?
-  - [ ] Can your SOC manually disable or reset accounts on detection?
-  - [ ] Is there partial automation (e.g., ticket + disable)?
+  - [ ] Is there a documented SOP for responding to identity-related incidents?
+  - [ ] Can you manually disable, lock, or reset accounts based on alerts?
+  - [ ] Are identity alerts routed via a ticketing system or SOAR playbook?
+  - [ ] Is there a review/escalation process when privileged accounts are involved?
 
 automation_intelligence:
-  - [ ] Is risk scoring applied to accounts?
-  - [ ] Are detection rules adaptive based on feedback or context?
-  - [ ] Are LLM or graph-based techniques used for detection?
+  - [ ] Do you apply risk scoring to users based on behavior or context?
+  - [ ] Are responses automated in part (e.g., auto-disable, MFA challenges)?
+  - [ ] Can your detection model adapt over time based on new inputs or feedback?
 ```
 
 ---
