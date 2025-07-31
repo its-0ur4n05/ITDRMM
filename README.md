@@ -23,6 +23,10 @@ This maturity model helps teams benchmark their ITDR readiness across **five mat
 | L3    | **Active** - Real-time detection & integrated response |
 | L4    | **Adaptive** - Fully automated, intelligent, risk-based ITDR
 
+### Maturity Radar Chart
+
+![Image text](https://github.com/its-0ur4n05/ITDRMM/blob/deef38321d949a55dcd9c4d845e8cfaeffed03ce/img/itdrmm_radar_chart.png)
+
 ### Level Descriptions (Detailed)
 
 #### 🔴 L0 - Nonexistent
