@@ -41,6 +41,7 @@ ITDR acts as the last line of defense when attackers have bypassed MFA or gained
 
 ## About This Tool
 
+The current ITDR Maturity Model was created by 0ur4n05 in Jul 2025.
 This repository provides a structured checklist and maturity model to help organizations self-assess their ITDR readiness and capabilities. It is designed to be:
 - **Technology-agnostic**
 - **Practical** for security teams, auditors, and architects
