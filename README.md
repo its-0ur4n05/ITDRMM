@@ -52,7 +52,6 @@ This repository provides a structured checklist and maturity model to help organ
 
 | Level | Description                         |
 |-------|-------------------------------------|
-| **Nonexistent**    | No ITDR capability |
 | **Reactive**    |  Basic visibility & passive detection |
 | **Baseline**    |  Defined coverage & manual response processes |
 | **Active**    |  Real-time detection & integrated response |
@@ -63,12 +62,6 @@ This repository provides a structured checklist and maturity model to help organ
 ![Image text](https://github.com/its-0ur4n05/ITDRMM/blob/ecffc852a271426810a2b681f731faf14a63ce0f/img/itdrmm_radar_chart.png)
 
 ### Level Descriptions (Detailed)
-
-#### 🔴 Nonexistent
-- No dedicated effort toward identity threat detection
-- No identity inventory or privilege separation
-- No logging or visibility into identity activities
-- Attackers can persist undetected indefinitely
 
 #### 🟠 Reactive
 - Initial efforts to collect identity-related logs (e.g., AD logs)
@@ -102,12 +95,12 @@ This repository provides a structured checklist and maturity model to help organ
 
 ## Capability Dimensions
 
-| Dimension            | Nonexistent | Reactive | Baseline | Active | Adaptive |
-|----------------------|------------------|---------------|---------------|-------------|---------------|
-| **Identity Visibility** | No inventory; accounts mixed | Partial account listing | Identity-asset mapping established | Full inventory incl. privileges & sessions | Dynamic, contextual identity risk profiling |
-| **Detection Coverage** | No logs collected | Some logs (e.g. AD) ingested | Baseline behavior rules defined | Real-time detection + behavior analytics | Cross-domain anomaly detection, LLM/graph-powered |
-| **Response Mechanism** | No process | Email alerts, ad-hoc reactions | SOP-based manual responses (lockout/reset) | Semi-automated via SOAR/playbooks | Closed-loop auto-response with risk-adaptive policy |
-| **Automation & Intelligence** | None | None | Scripted/manual triggers | Risk scoring & policy-based automation | ML/graph analysis, self-learning detection engine |
+| Dimension            | Reactive | Baseline | Active | Adaptive |
+|----------------------|---------------|---------------|-------------|---------------|
+| **Identity Visibility** | Partial account listing | Identity-asset mapping established | Full inventory incl. privileges & sessions | Dynamic, contextual identity risk profiling |
+| **Detection Coverage** | Some logs (e.g. AD) ingested | Baseline behavior rules defined | Real-time detection + behavior analytics | Cross-domain anomaly detection, LLM/graph-powered |
+| **Response Mechanism** | Email alerts, ad-hoc reactions | SOP-based manual responses (lockout/reset) | Semi-automated via SOAR/playbooks | Closed-loop auto-response with risk-adaptive policy |
+| **Automation & Intelligence** | None | Scripted/manual triggers | Risk scoring & policy-based automation | ML/graph analysis, self-learning detection engine |
 
 ---
 
