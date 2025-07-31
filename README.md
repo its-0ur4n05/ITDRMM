@@ -23,6 +23,42 @@ This maturity model helps teams benchmark their ITDR readiness across **five mat
 | L3    | **Active** - Real-time detection & integrated response |
 | L4    | **Adaptive** - Fully automated, intelligent, risk-based ITDR
 
+### Level Descriptions (Detailed)
+
+#### 🔴 L0 - Nonexistent
+- No dedicated effort toward identity threat detection
+- No identity inventory or privilege separation
+- No logging or visibility into identity activities
+- Attackers can persist undetected indefinitely
+
+#### 🟠 L1 - Reactive
+- Initial efforts to collect identity-related logs (e.g., AD logs)
+- Limited visibility over key users or critical accounts
+- Alerts sent via email or basic ticketing, but no structured response
+- No standardized roles or responsibilities for identity incidents
+- Detection mostly occurs *after* an incident or external report
+
+#### 🟡 L2 - Baseline
+- Basic inventory of accounts and identity-asset mapping exists
+- Detection rules in place for common abuse patterns (e.g., login anomalies)
+- Security team responds using SOPs: manual account disable, reset password, etc.
+- Incidents logged and escalated based on severity
+- Detection-to-response linkage starts forming but is still mostly manual
+
+#### 🟢 L3 - Active
+- Comprehensive identity inventory with privileged tracking and session logs
+- Real-time detection rules with behavioral analytics or baselines
+- Integration with SOAR for partial automation of response workflows
+- Response actions include contextual decisions based on role or criticality
+- Threat hunting for identity misuse starts to become systematic
+
+#### 🔵 L4 - Adaptive
+- Risk-based identity protection and dynamic response policies
+- Detection enriched by ML/graph/LLM-based analysis
+- Continuous feedback loop between detection, investigation, and policy tuning
+- Automated remediation with minimal human intervention (e.g., auto-MFA challenges, just-in-time access revocation)
+- Unified visibility across hybrid/cloud/on-prem identity infrastructure
+
 ---
 
 ## Capability Dimensions
