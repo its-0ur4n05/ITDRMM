@@ -9,17 +9,20 @@ If you have any questions or are interested in collaborating, feel free to conta
 In recent years, identity has become the most targeted attack vector in enterprise environments. Whether it's through credential stuffing, abusing privileged accounts, or lateral movement using legitimate identities, attackers are increasingly bypassing traditional perimeter defenses and endpoint detection by simply “logging in, not breaking in.”
 
 ### The Evolution of Identity Threats
+
 - **Credential Theft Becomes Pervasive**: Phishing, malware, and data breaches have led to an explosion in stolen credentials available on the dark web.
 - **Abuse of Legitimate Access**: Attackers are increasingly leveraging valid credentials and legitimate tools (e.g., RDP, PowerShell) to avoid detection.
 - **Cloud + On-Prem Complexity**: Hybrid environments mean identities span across Active Directory, Azure AD, Okta, cloud IAM roles, and more — creating fragmented visibility.
 - **Rise of Supply Chain and Insider Threats**: These threats often manifest through legitimate credentials misused from inside or via third-party access.
 
 ### Limitations of Traditional Security
+
 - **IAM ≠ Threat Detection**: Identity and Access Management systems (IAM, PAM) focus on provisioning and controlling access, not detecting misuse.
 - **UEBA Misalignment**: Traditional User & Entity Behavior Analytics systems often suffer from high false positives and poor explainability, especially in dynamic hybrid environments.
 - **Endpoint-Only EDR Blind Spots**: Many attacks that abuse identity leave minimal traces on the endpoint and are instead visible only through identity systems and logs.
 
 ### What is ITDR?
+
 Identity Threat Detection and Response (ITDR) refers to a class of security capabilities and practices focused on:
 - Monitoring identity infrastructure (e.g., AD, Azure AD, Okta) for signs of compromise
 - Detecting abnormal or risky identity behaviors (e.g., unusual privilege escalation, impossible travel)
@@ -28,23 +31,20 @@ Identity Threat Detection and Response (ITDR) refers to a class of security capa
 ITDR acts as the last line of defense when attackers have bypassed MFA or gained initial access through social engineering or supply chain compromise.
 
 ## Growing Demand for ITDR
+
 - **Compliance Pressure**: Regulatory frameworks such as NIS2, DORA, and ISO 27001 now emphasize identity-centric risk management and detection.
 - **Zero Trust Push**: Organizations moving to Zero Trust architectures must continuously verify identity trustworthiness, detect abuse, and respond quickly.
 - **SOC Integration**: Mature SOC teams are looking to extend EDR/XDR visibility into the identity layer, closing the gap between access control and threat response.
 - **Hybrid & Legacy Environments**: Many organizations still operate critical infrastructure in on-prem (IDC) setups, where existing ITDR solutions lack coverage or compatibility.
 
+---
+
 ## About This Tool
+
 This repository provides a structured checklist and maturity model to help organizations self-assess their ITDR readiness and capabilities. It is designed to be:
-- **Vendor-neutral**
+- **Technology-agnostic**
 - **Practical** for security teams, auditors, and architects
 - **Applicable to hybrid, on-prem, and cloud environments**
-
-## Overview
-This maturity model helps teams benchmark their ITDR readiness across **five maturity levels** and **four capability dimensions**. It's designed to be:
-
-- Technology-agnostic
-- Usable for cloud, hybrid, and on-prem (IDC) environments
-- Practical for SOCs, blue teams, and security architects
 
 ---
 
