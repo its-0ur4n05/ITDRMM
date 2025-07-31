@@ -149,5 +149,45 @@ You can extend this repository with:
 
 ---
 
+## ITDR Capability Metrics
+
+To evaluate and track ITDR program effectiveness over time, organizations should define and monitor a set of measurable indicators across the four capability dimensions. These metrics help distinguish maturity not just by implementation, but by **operational impact** and **quality**.
+
+Here are the metrics with examples for referennce.
+
+### Identity Visibility Metrics
+
+| Metric | Description | Target (Active+) |
+|--------|-------------|------------------|
+| **Identity Inventory Coverage** | % of total identities accounted for in inventory (incl. human, machine, service accounts) | ≥ 95% |
+| **Privileged Account Coverage** | % of privileged identities with owner, usage audit, and least-privilege status verified | ≥ 90% |
+| **Asset Mapping Accuracy** | % of identities mapped to assets/systems they access | ≥ 90% |
+
+### Detection Coverage Metrics
+
+| Metric | Description | Target (Active+) |
+|--------|-------------|------------------|
+| **Log Source Coverage** | % of relevant identity-related log sources onboarded (e.g., AD, VPN, IAM, PAM) | ≥ 90% |
+| **Rule Effectiveness** | % of identity detection rules triggered that result in true positives | ≥ 70% |
+| **Behavioral Baseline Completeness** | % of users with baseline behavioral profiles established | ≥ 85% |
+
+### Response Mechanism Metrics
+
+| Metric | Description | Target (Active+) |
+|--------|-------------|------------------|
+| **Mean Time to Contain (MTTC)** | Average time from alert to account containment (disable/lock/reset) | < 10 mins |
+| **Response SOP Coverage** | % of identity alerts that are covered by SOP or playbook | ≥ 90% |
+| **Privileged Incident Escalation** | % of privileged identity incidents escalated within SLA | ≥ 95% |
+
+### Automation & Intelligence Metrics
+
+| Metric | Description | Target (Adaptive) |
+|--------|-------------|------------------|
+| **Automated Response Ratio** | % of identity alerts with partially or fully automated responses | ≥ 70% |
+| **Risk Score Accuracy** | Correlation between user risk score and actual incident severity (manual review) | ≥ 80% |
+| **Detection Adaptiveness** | % of detection models updated with new IOCs, TTPs, or feedback monthly | ≥ 90% |
+
+---
+
 > **Author**: 0ur4n05
 > **Last Updated**: July 2025
