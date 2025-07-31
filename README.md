@@ -2,6 +2,8 @@
 
 A practical framework to help organizations assess and improve their **Identity Threat Detection and Response (ITDR)** capabilities, especially in hybrid and on-prem environments (e.g., IDC).
 
+If you have any questions or are interested in collaborating, feel free to contact me at: its0ur4n05@gmail.com
+
 ## Overview
 This maturity model helps teams benchmark their ITDR readiness across **five maturity levels** and **four capability dimensions**. It's designed to be:
 
