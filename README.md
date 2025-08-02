@@ -89,7 +89,7 @@ This repository provides a structured checklist and maturity model to help organ
 
 ### Maturity Radar Chart
 
-![Image text](https://github.com/its-0ur4n05/ITDRMM/blob/7d108b9742c36446da89279c06ad77ef9328568a/img/itdrmm_radar_chart.png)
+![Image text](https://github.com/its-0ur4n05/ITDRMM/blob/6b8d03d6d4d4ee902df0cdefe0a22e042b55a78f/img/itdrmm_radar_chart.png)
 
 ---
 
