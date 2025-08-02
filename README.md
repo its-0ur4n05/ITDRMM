@@ -1,3 +1,5 @@
+[toc]
+
 # ITDR Maturity Model Toolkit
 
 A practical framework to help organizations assess and improve their **Identity Threat Detection and Response (ITDR)** capabilities, especially in hybrid and on-prem environments (e.g., IDC).
