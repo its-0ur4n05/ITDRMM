@@ -1,31 +1,43 @@
 # ITDR Maturity Model - Self Assessment Checklist
-# Version: 1.0
-# Last updated: July 2025
+# Version: 2.0
+# Last updated: Aug 2025
 # Usage: Answer each question with true/false or yes/no
 
-identity_visibility:
-  - question: Do you maintain an up-to-date inventory of all identities (human + machine)?
-  - question: Are privileged accounts clearly identified and categorized?
-  - question: Are service accounts and their owners documented?
-  - question: Can you trace which identities access which systems (identity-to-asset mapping)?
+
+identity_governance:
+  - question: Is there a centralized identity source (e.g., directory, IGA platform) managing all identities?
+  - question: Are identity lifecycle events (provisioning, deprovisioning, transfers) automated or workflow-driven?
+  - question: Are there regular access reviews and certification processes?
+  - question: Is there governance over privilege escalation and role assignment?
+  - question: Are identity policies dynamically enforced (e.g., based on risk or context)?
 
 
-detection_coverage:
-  - question: Are identity-related logs (e.g., AD, PAM, VPN, Jump server) being collected?
-  - question: Are there rules to detect lateral movement and privilege escalation?
-  - question: Do you have baselines for normal user behavior (e.g., login times, locations)?
-  - question: Are high-risk activities (e.g., password dump, multiple failed logins) being monitored?
+system_coverage:
+  - question: Are all critical systems (e.g., AD, VPN, cloud, SaaS, PAM, bastion) integrated with identity monitoring?
+  - question: Is log data from both on-premises and cloud platforms being collected and normalized?
+  - [question: Can identity activity be correlated across different systems or domains?
+  - question: Is integration regularly updated to reflect changes in infrastructure or new systems?
 
 
-response_mechanism:
-  - question: Is there a documented SOP for responding to identity-related incidents?
-  - question: Can you manually disable, lock, or reset accounts based on alerts?
-  - question: Are identity alerts routed via a ticketing system or SOAR playbook?
-  - question: Is there a review/escalation process when privileged accounts are involved?
+identity_asset_visibility:
+  - question: Is there an up-to-date inventory of all identities, including service and machine accounts?
+  - question: Are entitlements, privileges, and roles mapped to each identity?
+  - question: Can you view active login sessions and their associated assets?
+  - question: Is there visibility into identity relationships (e.g., ownership, group memberships, delegated access)?
+  - question: Can historical identity activity be reconstructed for investigation?
 
 
-automation_intelligence:
-  - question: Do you apply risk scoring to users based on behavior or context?
-  - question: Are responses automated in part (e.g., auto-disable, MFA challenges)?
-  - question: Are graph-based or ML techniques used for behavioral anomaly detection?
-  - question: Can your detection model adapt over time based on new inputs or feedback?
+detection_and_analytics:
+  - question: Are identity-related logs (e.g., AD, PAM, VPN, SaaS) actively monitored?
+  - question: Are there detection rules or UEBA models for common threats (e.g., lateral movement, impersonation)?
+  - question: Are anomalies in login behavior, permission use, and session context detected?
+  - question: Is detection enriched with context like user risk level, privilege type, or historical behavior?
+  - question: Are detection models self-learning or adjusted based on feedback?
+
+
+response_capability:
+  - question: Is there an SOP for identity-related security incidents?
+  - question: Are alerts for identity threats routed to appropriate teams (e.g., via ticket or SOAR)?
+  - question: Can responders take immediate actions (e.g., disable account, rotate keys) in response to alerts?
+  - question: Is incident response partially or fully automated for high-risk identity events?
+  - question: Is there a closed-loop feedback mechanism from response outcomes to improve detection?
