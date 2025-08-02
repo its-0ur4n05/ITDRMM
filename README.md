@@ -96,12 +96,14 @@ This repository provides a structured checklist and maturity model to help organ
 
 ## Capability Dimensions
 
-| Dimension            | Reactive | Baseline | Active | Adaptive |
-|----------------------|---------------|---------------|-------------|---------------|
-| **Identity Visibility** | Partial account listing | Identity-asset mapping established | Full inventory incl. privileges & sessions | Dynamic, contextual identity risk profiling |
-| **Detection Coverage** | Some logs (e.g. AD) ingested | Baseline behavior rules defined | Real-time detection + behavior analytics | Cross-domain anomaly detection, LLM/graph-powered |
-| **Response Mechanism** | Email alerts, ad-hoc reactions | SOP-based manual responses (lockout/reset) | Semi-automated via SOAR/playbooks | Closed-loop auto-response with risk-adaptive policy |
-| **Automation & Intelligence** | None | Scripted/manual triggers | Risk scoring & policy-based automation | ML/graph analysis, self-learning detection engine |
+| **Dimension / Stage**     | **Reactive**                                               | **Baseline**                                                | **Active**                                                        | **Adaptive**                                                      |
+|---------------------------|-------------------------------------------------------------|--------------------------------------------------------------|--------------------------------------------------------------------|--------------------------------------------------------------------|
+| **1. Identity Governance**| No directory, siloed mgmt, manual ops                       | Approval workflows, audit trails, basic automation           | IGA/CIEM integration, privilege control, drift detection           | Contextual enforcement, adaptive provisioning, full automation     |
+| **2. System Coverage**    | AD-only, missing logs, partial visibility                   | Key systems onboarded (AD, VPN), coverage growing            | Full infra & cloud logs, session tracing, cross-domain correlation | Unified data layer, real-time sync, end-to-end coverage            |
+| **3. Asset Visibility**   | Incomplete account list, no session view                   | Static mapping of IDs and entitlements                       | Live identity inventory, session + privilege tracking              | Historical lineage, context-aware assets, identity graphing        |
+| **4. Detection & Analytics** | Rule-only, delayed alerts, weak signal                    | Real-time detections, basic context rules                    | UEBA, privilege abuse detection, session patterning                | ML models, identity graph analysis, adaptive detection              |
+| **5. Response Capability**| Manual alerts, no SOP, reactive steps                      | SOP-driven, human-in-loop response                          | Semi-automated response, playbooks, alert enrichment               | Fully automated loop, dynamic decisions, risk-based response        |
+
 
 ---
 
