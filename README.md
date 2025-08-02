@@ -166,11 +166,11 @@ You can extend this repository with:
 
 ---
 
-## ITDR Capability Metrics - For reference only
+## ITDR Capability Metrics
 
 To evaluate and track ITDR program effectiveness over time, organizations should define and monitor a set of measurable indicators across the four capability dimensions. These metrics help distinguish maturity not just by implementation, but by **operational impact** and **quality**.
 
-Here are the metrics with examples for reference.
+Here are the metrics with examples **- For reference only**.
 
 ### Identity Visibility Metrics
 
