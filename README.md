@@ -1,4 +1,29 @@
-@[toc]
+- [ITDR Maturity Model Toolkit](#itdr-maturity-model-toolkit)
+  * [Why ITDR?](#why-itdr-)
+    + [The Evolution of Identity Threats](#the-evolution-of-identity-threats)
+    + [Limitations of Traditional Security](#limitations-of-traditional-security)
+    + [What is ITDR?](#what-is-itdr-)
+  * [Growing Demand for ITDR](#growing-demand-for-itdr)
+  * [About This Tool](#about-this-tool)
+  * [Maturity Levels](#maturity-levels)
+  * [Capability Dimensions](#capability-dimensions)
+    + [Maturity Radar Chart](#maturity-radar-chart)
+    + [Level Descriptions (Detailed)](#level-descriptions--detailed-)
+      - [🟠 Reactive Stage](#---reactive-stage)
+      - [🟡 Baseline Stage](#---baseline-stage)
+      - [🟢 Active Stage](#---active-stage)
+      - [🔵 Adaptive](#---adaptive)
+  * [Evaluation Checklist](#evaluation-checklist)
+  * [How to Use This](#how-to-use-this)
+  * [ITDR Capability Metrics](#itdr-capability-metrics)
+    + [Identity Visibility Metrics](#identity-visibility-metrics)
+    + [Detection Coverage Metrics](#detection-coverage-metrics)
+    + [Response Mechanism Metrics](#response-mechanism-metrics)
+    + [Identity Governance Metrics](#identity-governance-metrics)
+    + [System Coverage Metrics](#system-coverage-metrics)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 # ITDR Maturity Model Toolkit
 
