@@ -58,40 +58,6 @@ This repository provides a structured checklist and maturity model to help organ
 | **Active**    |  The organization achieves broader system coverage, including cloud and session data, with integrated IGA or CIEM solutions. Detection leverages behavioral analytics and identity signals such as privilege abuse or abnormal sessions. Response mechanisms are partially automated using playbooks or SOAR tools. |
 | **Adaptive**    |  An adaptive ITDR program features full-context identity governance, real-time cross-domain visibility, and dynamic threat detection via ML or identity graphs. Response is risk-adaptive, fully automated, and closed-loop, minimizing human intervention. The system continuously learns and evolves based on feedback and attack patterns. |
 
-### Maturity Radar Chart
-
-![Image text](https://github.com/its-0ur4n05/ITDRMM/blob/c09c7eb810489ba7be0de6958cab306a9bf2bd93/img/itdrmm_radar_chart.png)
-
-### Level Descriptions (Detailed)
-
-#### 🟠 Reactive
-- Initial efforts to collect identity-related logs (e.g., AD logs)
-- Limited visibility over key users or critical accounts
-- Alerts sent via email or basic ticketing, but no structured response
-- No standardized roles or responsibilities for identity incidents
-- Detection mostly occurs *after* an incident or external report
-
-#### 🟡 Baseline
-- Basic inventory of accounts and identity-asset mapping exists
-- Detection rules in place for common abuse patterns (e.g., login anomalies)
-- Security team responds using SOPs: manual account disable, reset password, etc.
-- Incidents logged and escalated based on severity
-- Detection-to-response linkage starts forming but is still mostly manual
-
-#### 🟢 Active
-- Comprehensive identity inventory with privileged tracking and session logs
-- Real-time detection rules with behavioral analytics or baselines
-- Integration with SOAR for partial automation of response workflows
-- Response actions include contextual decisions based on role or criticality
-- Threat hunting for identity misuse starts to become systematic
-
-#### 🔵 Adaptive
-- Risk-based identity protection and dynamic response policies
-- Detection enriched by ML/graph/LLM-based analysis
-- Continuous feedback loop between detection, investigation, and policy tuning
-- Automated remediation with minimal human intervention (e.g., auto-MFA challenges, just-in-time access revocation)
-- Unified visibility across hybrid/cloud/on-prem identity infrastructure
-
 ---
 
 ## Capability Dimensions
@@ -104,6 +70,43 @@ This repository provides a structured checklist and maturity model to help organ
 | **Detection & Analytics** | Rule-only, delayed alerts, weak signal                    | Real-time detections, basic context rules                    | UEBA, privilege abuse detection, session patterning                | ML models, identity graph analysis, adaptive detection              |
 | **Response Capability**| Manual alerts, no SOP, reactive steps                      | SOP-driven, human-in-loop response                          | Semi-automated response, playbooks, alert enrichment               | Fully automated loop, dynamic decisions, risk-based response        |
 
+---
+
+### Maturity Radar Chart
+
+![Image text](https://github.com/its-0ur4n05/ITDRMM/blob/c09c7eb810489ba7be0de6958cab306a9bf2bd93/img/itdrmm_radar_chart.png)
+
+---
+
+### Level Descriptions (Detailed)
+
+#### 🟠 Reactive Stage
+- **Identity Governance:** No centralized identity directory. Accounts and permissions are siloed, with manual provisioning and no consistent cleanup or review.
+- **System Coverage:** Only core identity logs (e.g., AD) are connected. Critical systems like VPN, SaaS, and cloud services are not integrated.
+- **Identity Asset Visibility:** User listings are incomplete. No insight into entitlements, active sessions, or access relationships.
+- **Detection & Analytics:** Very limited logs. Detection is reactive and lacks correlation or context.
+- **Response Capability:** Manual observations or emails trigger actions. No formal response process or tooling.
+
+#### 🟡 Baseline Stage
+- **Identity Governance:** Approval workflows are in place. Basic access reviews and audits are conducted with some automation for lifecycle management.
+- **System Coverage:** Major identity systems (e.g., AD, VPN, bastion hosts) are connected. Some key business systems are integrated.
+- **Identity Asset Visibility:** A static inventory of identities and privileges exists. Mappings are manually or semi-automatically maintained.
+- **Detection & Analytics:** Real-time rule-based alerts are available, such as detections for abnormal login times or locations.
+- **Response Capability:** Standard operating procedures (SOPs) are in place for incidents. Responses are manual but consistent.
+
+#### 🟢 Active Stage
+- **Identity Governance:** IGA/CIEM solutions are in use. Privilege assignments are dynamically enforced. Unauthorized changes are automatically flagged.
+- **System Coverage:** Broad log coverage including on-prem, SaaS, cloud services, and more. Identity data is correlated across sources.
+- **Identity Asset Visibility:** Full dynamic visibility into identities, entitlements, sessions, and ownership relationships.
+- **Detection & Analytics:** Behavioral analytics (UEBA) are in place to detect lateral movement, privilege escalation, and impersonation attempts.
+- **Response Capability:** Responses are semi-automated via SOAR or playbooks. Some steps (e.g., alert enrichment or account lockout) are automated.
+
+#### 🔵 Adaptive
+- **Identity Governance:** Fully automated governance with context-aware adjustments. Risk-based policies and feedback loops from detections guide enforcement.
+- **System Coverage:** Continuous and scalable system integration. Real-time analytics provide unified, cross-domain insights into identity behavior.
+- **Identity Asset Visibility:** Identity activity is tracked over time for forensics and policy enforcement. Visibility is real-time and historical.
+- **Detection & Analytics:** Self-learning detection using ML and identity graphs. Capable of adapting to new threats dynamically.
+- **Response Capability:** Fully automated and adaptive response. Closed-loop detection-response cycles minimize human intervention.
 
 ---
 
@@ -112,28 +115,40 @@ This repository provides a structured checklist and maturity model to help organ
 Create a checklist (e.g., YAML or JSON) to self-assess each dimension:
 
 ```yaml
-identity_visibility:
-  - [ ] Do you maintain an up-to-date inventory of all identities (human + machine)?
-  - [ ] Are privileged accounts clearly identified and tracked?
-  - [ ] Are service accounts and their owners documented?
-  - [ ] Can you trace which identities access which systems (identity-to-asset mapping)?
+identity_governance:
+  - [ ] Is there a centralized identity source (e.g., directory, IGA platform) managing all identities?
+  - [ ] Are identity lifecycle events (provisioning, deprovisioning, transfers) automated or workflow-driven?
+  - [ ] Are there regular access reviews and certification processes?
+  - [ ] Is there governance over privilege escalation and role assignment?
+  - [ ] Are identity policies dynamically enforced (e.g., based on risk or context)?
 
-detection_coverage:
-  - [ ] Are identity-related logs (e.g., AD, PAM, VPN, Jump server) being collected?
-  - [ ] Are there rules to detect lateral movement and privilege escalation?
-  - [ ] Do you have baselines for normal user behavior (e.g., login times, locations)?
-  - [ ] Are high-risk activities (e.g., password dump, multiple failed logins) being monitored?
+system_coverage:
+  - [ ] Are all critical systems (e.g., AD, VPN, cloud, SaaS, PAM, bastion) integrated with identity monitoring?
+  - [ ] Is log data from both on-premises and cloud platforms being collected and normalized?
+  - [ ] Can identity activity be correlated across different systems or domains?
+  - [ ] Is integration regularly updated to reflect changes in infrastructure or new systems?
 
-response_mechanism:
-  - [ ] Is there a documented SOP for responding to identity-related incidents?
-  - [ ] Can you manually disable, lock, or reset accounts based on alerts?
-  - [ ] Are identity alerts routed via a ticketing system or SOAR playbook?
-  - [ ] Is there a review/escalation process when privileged accounts are involved?
+identity_asset_visibility:
+  - [ ] Is there an up-to-date inventory of all identities, including service and machine accounts?
+  - [ ] Are entitlements, privileges, and roles mapped to each identity?
+  - [ ] Can you view active login sessions and their associated assets?
+  - [ ] Is there visibility into identity relationships (e.g., ownership, group memberships, delegated access)?
+  - [ ] Can historical identity activity be reconstructed for investigation?
 
-automation_intelligence:
-  - [ ] Do you apply risk scoring to users based on behavior or context?
-  - [ ] Are responses automated in part (e.g., auto-disable, MFA challenges)?
-  - [ ] Can your detection model adapt over time based on new inputs or feedback?
+detection_and_analytics:
+  - [ ] Are identity-related logs (e.g., AD, PAM, VPN, SaaS) actively monitored?
+  - [ ] Are there detection rules or UEBA models for common threats (e.g., lateral movement, impersonation)?
+  - [ ] Are anomalies in login behavior, permission use, and session context detected?
+  - [ ] Is detection enriched with context like user risk level, privilege type, or historical behavior?
+  - [ ] Are detection models self-learning or adjusted based on feedback?
+
+response_capability:
+  - [ ] Is there an SOP for identity-related security incidents?
+  - [ ] Are alerts for identity threats routed to appropriate teams (e.g., via ticket or SOAR)?
+  - [ ] Can responders take immediate actions (e.g., disable account, rotate keys) in response to alerts?
+  - [ ] Is incident response partially or fully automated for high-risk identity events?
+  - [ ] Is there a closed-loop feedback mechanism from response outcomes to improve detection?
+
 ```
 
 ---
@@ -162,16 +177,18 @@ Here are the metrics with examples for reference.
 | Metric | Description | Target (Active+) |
 |--------|-------------|------------------|
 | **Identity Inventory Coverage** | % of total identities accounted for in inventory (incl. human, machine, service accounts) | ≥ 95% |
-| **Privileged Account Coverage** | % of privileged identities with owner, usage audit, and least-privilege status verified | ≥ 90% |
-| **Asset Mapping Accuracy** | % of identities mapped to assets/systems they access | ≥ 90% |
+| **Privileged Account Accuracy** | % of privileged identities with clear ownership, classification, and usage logs | ≥ 90% |
+| **Identity-to-Asset Mapping** | % of identities mapped to the systems or applications they access | ≥ 90% |
+| **Session Visibility Rate** | % of active sessions traceable to individual identities | ≥ 85% |
 
 ### Detection Coverage Metrics
 
 | Metric | Description | Target (Active+) |
 |--------|-------------|------------------|
 | **Log Source Coverage** | % of relevant identity-related log sources onboarded (e.g., AD, VPN, IAM, PAM) | ≥ 90% |
-| **Rule Effectiveness** | % of identity detection rules triggered that result in true positives | ≥ 70% |
-| **Behavioral Baseline Completeness** | % of users with baseline behavioral profiles established | ≥ 85% |
+| **Detection Rule Effectiveness** | 	% of identity detection alerts that result in true positives | ≥ 99% |
+| **Behavioral Baseline Coverage** | % of identities with behavior profiles (login, access patterns, locations) | ≥ 85% |
+| **Anomaly Detection Precision** | % of anomalies correctly flagged by rule or ML-based methods | ≥ 80% |
 
 ### Response Mechanism Metrics
 
@@ -180,14 +197,25 @@ Here are the metrics with examples for reference.
 | **Mean Time to Contain (MTTC)** | Average time from alert to account containment (disable/lock/reset) | < 10 mins |
 | **Response SOP Coverage** | % of identity alerts that are covered by SOP or playbook | ≥ 90% |
 | **Privileged Incident Escalation** | % of privileged identity incidents escalated within SLA | ≥ 95% |
+| **Response Automation Rate** | % of responses initiated via automation (e.g., via SOAR or script) | ≥ 70% |
 
-### Automation & Intelligence Metrics
+### Identity Governance Metrics
 
 | Metric | Description | Target (Adaptive) |
 |--------|-------------|------------------|
-| **Automated Response Ratio** | % of identity alerts with partially or fully automated responses | ≥ 70% |
-| **Risk Score Accuracy** | Correlation between user risk score and actual incident severity (manual review) | ≥ 80% |
-| **Detection Adaptiveness** | % of detection models updated with new IOCs, TTPs, or feedback monthly | ≥ 90% |
+| **Joiner/Mover/Leaver Process Coverage** | % of identity lifecycle events governed by automated workflows | ≥ 90% |
+| **Access Review Completion Rate** | % of periodic entitlement reviews completed on time | ≥ 95% |
+| **Policy Enforcement Accuracy** | % of access violations detected and remediated within SLA | ≥ 90% |
+| **Orphan Account Ratio** | % of accounts without active owner or recent activity | < 1% |
+
+### System Coverage Metrics
+
+| Metric | Description | Target (Adaptive) |
+|--------|-------------|------------------|
+| **System Log Source Coverage** | % of key identity-linked systems with telemetry/logs integrated | ≥ 90% |
+| **Shadow System Detection Rate** | % of unauthorized or unmanaged systems identified and flagged | ≥ 85% |
+| **Session Recording Coverage** | % of high-risk systems with session logging or recording enabled | ≥ 80% |
+| **Jump/Proxy System Coverage** | % of bastions/jump servers monitored for identity activity | ≥ 90% |
 
 ---
 
