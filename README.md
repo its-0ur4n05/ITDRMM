@@ -53,10 +53,10 @@ This repository provides a structured checklist and maturity model to help organ
 
 | Level | Description                         |
 |-------|-------------------------------------|
-| **Reactive**    |  Basic visibility & passive detection |
-| **Baseline**    |  Defined coverage & manual response processes |
-| **Active**    |  Real-time detection & integrated response |
-| **Adaptive**    |  Fully automated, intelligent, risk-based ITDR
+| **Reactive**    |  Organizations in the Reactive stage lack structured identity governance and have minimal visibility into identity activities. Detection relies on limited logs (e.g., AD only), with responses mostly ad-hoc and manual. Identity risks are often discovered after damage has occurred. |
+| **Baseline**    |  At this stage, basic identity processes like approval workflows and system onboarding begin to take shape. Detection capabilities rely on real-time rule-based alerts, and manual responses follow documented SOPs. Visibility into accounts and entitlements improves but remains static and fragmented. |
+| **Active**    |  The organization achieves broader system coverage, including cloud and session data, with integrated IGA or CIEM solutions. Detection leverages behavioral analytics and identity signals such as privilege abuse or abnormal sessions. Response mechanisms are partially automated using playbooks or SOAR tools. |
+| **Adaptive**    |  An adaptive ITDR program features full-context identity governance, real-time cross-domain visibility, and dynamic threat detection via ML or identity graphs. Response is risk-adaptive, fully automated, and closed-loop, minimizing human intervention. The system continuously learns and evolves based on feedback and attack patterns. |
 
 ### Maturity Radar Chart
 
@@ -98,11 +98,11 @@ This repository provides a structured checklist and maturity model to help organ
 
 | **Dimension / Stage**     | **Reactive**                                               | **Baseline**                                                | **Active**                                                        | **Adaptive**                                                      |
 |---------------------------|-------------------------------------------------------------|--------------------------------------------------------------|--------------------------------------------------------------------|--------------------------------------------------------------------|
-| **1. Identity Governance**| No directory, siloed mgmt, manual ops                       | Approval workflows, audit trails, basic automation           | IGA/CIEM integration, privilege control, drift detection           | Contextual enforcement, adaptive provisioning, full automation     |
-| **2. System Coverage**    | AD-only, missing logs, partial visibility                   | Key systems onboarded (AD, VPN), coverage growing            | Full infra & cloud logs, session tracing, cross-domain correlation | Unified data layer, real-time sync, end-to-end coverage            |
-| **3. Asset Visibility**   | Incomplete account list, no session view                   | Static mapping of IDs and entitlements                       | Live identity inventory, session + privilege tracking              | Historical lineage, context-aware assets, identity graphing        |
-| **4. Detection & Analytics** | Rule-only, delayed alerts, weak signal                    | Real-time detections, basic context rules                    | UEBA, privilege abuse detection, session patterning                | ML models, identity graph analysis, adaptive detection              |
-| **5. Response Capability**| Manual alerts, no SOP, reactive steps                      | SOP-driven, human-in-loop response                          | Semi-automated response, playbooks, alert enrichment               | Fully automated loop, dynamic decisions, risk-based response        |
+| **Identity Governance**| No directory, siloed mgmt, manual ops                       | Approval workflows, audit trails, basic automation           | IGA/CIEM integration, privilege control, drift detection           | Contextual enforcement, adaptive provisioning, full automation     |
+| **System Coverage**    | AD-only, missing logs, partial visibility                   | Key systems onboarded (AD, VPN), coverage growing            | Full infra & cloud logs, session tracing, cross-domain correlation | Unified data layer, real-time sync, end-to-end coverage            |
+| **Asset Visibility**   | Incomplete account list, no session view                   | Static mapping of IDs and entitlements                       | Live identity inventory, session + privilege tracking              | Historical lineage, context-aware assets, identity graphing        |
+| **Detection & Analytics** | Rule-only, delayed alerts, weak signal                    | Real-time detections, basic context rules                    | UEBA, privilege abuse detection, session patterning                | ML models, identity graph analysis, adaptive detection              |
+| **Response Capability**| Manual alerts, no SOP, reactive steps                      | SOP-driven, human-in-loop response                          | Semi-automated response, playbooks, alert enrichment               | Fully automated loop, dynamic decisions, risk-based response        |
 
 
 ---
