@@ -1,9 +1,6 @@
 # ITDR Maturity Model Toolkit
 - [ITDR Maturity Model Toolkit](#itdr-maturity-model-toolkit)
   * [Why ITDR?](#why-itdr-)
-    + [The Evolution of Identity Threats](#the-evolution-of-identity-threats)
-    + [Limitations of Traditional Security](#limitations-of-traditional-security)
-    + [What is ITDR?](#what-is-itdr-)
   * [Growing Demand for ITDR](#growing-demand-for-itdr)
   * [About This Tool](#about-this-tool)
   * [Maturity Levels](#maturity-levels)
