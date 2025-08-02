@@ -1,4 +1,4 @@
-[toc]
+@[toc]
 
 # ITDR Maturity Model Toolkit
 
